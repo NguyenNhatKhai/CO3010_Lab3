@@ -9,6 +9,9 @@
 #define INC_PROCESSING_FSM_H_
 
 #include "input_button.h"
+#include "output_led7seg.h"
+#include "output_traffic.h"
+#include "software_timer.h"
 
 enum FSM_STATE {FSM_NORMAL, FSM_RED_MOD, FSM_AMBER_MOD, FSM_GREEN_MOD};
 

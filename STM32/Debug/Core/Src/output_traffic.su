@@ -1,0 +1,2 @@
+../Core/Src/output_traffic.c:19:6:trafficInit	8	static
+../Core/Src/output_traffic.c:27:6:trafficReInit	16	static

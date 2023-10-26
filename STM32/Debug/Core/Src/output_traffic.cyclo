@@ -1,0 +1,2 @@
+../Core/Src/output_traffic.c:19:6:trafficInit	1
+../Core/Src/output_traffic.c:27:6:trafficReInit	7

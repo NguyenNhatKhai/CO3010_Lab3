@@ -91,6 +91,7 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT (&htim2);
+  led7segInit();
   fsmInit();
   /* USER CODE END 2 */
 
@@ -98,6 +99,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  led7segScanning();
 	  fsmProcessing();
     /* USER CODE END WHILE */
 
@@ -244,6 +246,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	timerRun();
+	buttonReading();
 }
 /* USER CODE END 4 */
 

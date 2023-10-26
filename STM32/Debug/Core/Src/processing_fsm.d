@@ -24,7 +24,8 @@ Core/Src/processing_fsm.o: ../Core/Src/processing_fsm.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Inc/software_timer.h
+ ../Core/Inc/software_timer.h ../Core/Inc/output_led7seg.h \
+ ../Core/Inc/output_traffic.h
 ../Core/Inc/processing_fsm.h:
 ../Core/Inc/input_button.h:
 ../Core/Inc/main.h:
@@ -53,3 +54,5 @@ Core/Src/processing_fsm.o: ../Core/Src/processing_fsm.c \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 ../Core/Inc/software_timer.h:
+../Core/Inc/output_led7seg.h:
+../Core/Inc/output_traffic.h:
