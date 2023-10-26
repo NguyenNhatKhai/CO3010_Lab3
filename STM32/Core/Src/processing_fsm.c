@@ -171,6 +171,21 @@ void fsmProcessing(void) {
 		if (buttonPressed(0)) {
 			fsmReInit(FSM_GREEN_MOD);
 		}
+		if (buttonPressed(1)) {
+			led7segNumbers[1] ++;
+			if (led7segNumbers[1] >= pow(10, LED7SEG_DIGIT_NUMBER)) {
+				led7segNumbers[1] = 0;
+			}
+		}
+		if (buttonPressed(2)) {
+			led7segNumbers[1] --;
+			if (led7segNumbers[1] < 0) {
+				led7segNumbers[1] = pow(10, LED7SEG_DIGIT_NUMBER) - 1;
+			}
+		}
+		if (buttonPressed(3)) {
+			trafficAmberDuration = led7segNumbers[1];
+		}
 		break;
 	case FSM_GREEN_MOD:
 		if (timerFlags[1] == 1) {
