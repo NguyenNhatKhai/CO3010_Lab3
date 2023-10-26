@@ -1,4 +1,8 @@
+"./Core/Src/input_button.o"
 "./Core/Src/main.o"
+"./Core/Src/output_led7seg.o"
+"./Core/Src/output_traffic.o"
+"./Core/Src/processing_fsm.o"
 "./Core/Src/software_timer.o"
 "./Core/Src/stm32f1xx_hal_msp.o"
 "./Core/Src/stm32f1xx_it.o"
