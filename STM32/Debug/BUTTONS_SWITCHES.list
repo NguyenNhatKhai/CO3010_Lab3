@@ -21,9 +21,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   8 .data         00000014  20000000  08001df0  00020000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          0000009c  20000014  08001e04  00020014  2**2
+  9 .bss          00000094  20000014  08001e04  00020014  2**2
                   ALLOC
- 10 ._user_heap_stack 00000600  200000b0  08001e04  000200b0  2**0
+ 10 ._user_heap_stack 00000600  200000a8  08001e04  000200a8  2**0
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  00020014  2**0
                   CONTENTS, READONLY
@@ -932,7 +932,7 @@ void timerRun() {
  8000628:	3301      	adds	r3, #1
  800062a:	607b      	str	r3, [r7, #4]
  800062c:	687b      	ldr	r3, [r7, #4]
- 800062e:	2b04      	cmp	r3, #4
+ 800062e:	2b03      	cmp	r3, #3
  8000630:	dddc      	ble.n	80005ec <timerRun+0xc>
 			}
 		}
@@ -945,7 +945,7 @@ void timerRun() {
  800063a:	bc80      	pop	{r7}
  800063c:	4770      	bx	lr
  800063e:	bf00      	nop
- 8000640:	200000a0 	.word	0x200000a0
+ 8000640:	2000009c 	.word	0x2000009c
  8000644:	20000098 	.word	0x20000098
 
 08000648 <HAL_MspInit>:
@@ -1337,7 +1337,7 @@ LoopFillZerobss:
   ldr r2, =_sbss
  8000784:	20000014 	.word	0x20000014
   ldr r4, =_ebss
- 8000788:	200000b0 	.word	0x200000b0
+ 8000788:	200000a8 	.word	0x200000a8
 
 0800078c <ADC1_2_IRQHandler>:
  * @retval : None
@@ -1485,7 +1485,7 @@ __weak void HAL_IncTick(void)
  8000834:	bc80      	pop	{r7}
  8000836:	4770      	bx	lr
  8000838:	20000010 	.word	0x20000010
- 800083c:	200000ac 	.word	0x200000ac
+ 800083c:	200000a4 	.word	0x200000a4
 
 08000840 <HAL_GetTick>:
   * @note  This function is declared as __weak to be overwritten in case of other
@@ -1504,7 +1504,7 @@ __weak uint32_t HAL_GetTick(void)
  800084a:	46bd      	mov	sp, r7
  800084c:	bc80      	pop	{r7}
  800084e:	4770      	bx	lr
- 8000850:	200000ac 	.word	0x200000ac
+ 8000850:	200000a4 	.word	0x200000a4
 
 08000854 <__NVIC_SetPriorityGrouping>:
            In case of a conflict between priority grouping and available
