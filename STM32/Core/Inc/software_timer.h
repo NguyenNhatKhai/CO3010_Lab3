@@ -10,7 +10,7 @@
 
 #include "main.h"
 
-#define TIMER_NUMBER 5
+#define TIMER_NUMBER 4
 #define TIMER_DURATION 10
 
 extern uint8_t timerFlags[TIMER_NUMBER];
