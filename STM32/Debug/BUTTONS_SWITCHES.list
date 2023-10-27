@@ -21,9 +21,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   8 .data         000000b8  20000000  08003d30  00020000  2**3
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          000001f0  200000b8  08003de8  000200b8  2**2
+  9 .bss          000001e8  200000b8  08003de8  000200b8  2**2
                   ALLOC
- 10 ._user_heap_stack 00000600  200002a8  08003de8  000202a8  2**0
+ 10 ._user_heap_stack 00000600  200002a0  08003de8  000202a0  2**0
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  000200b8  2**0
                   CONTENTS, READONLY
@@ -2745,7 +2745,7 @@ void timerSet(int duration, int index) {
  8001694:	2b00      	cmp	r3, #0
  8001696:	db0d      	blt.n	80016b4 <timerSet+0x2c>
  8001698:	683b      	ldr	r3, [r7, #0]
- 800169a:	2b04      	cmp	r3, #4
+ 800169a:	2b03      	cmp	r3, #3
  800169c:	dc0a      	bgt.n	80016b4 <timerSet+0x2c>
 		timerCounters[index] = duration;
  800169e:	687b      	ldr	r3, [r7, #4]
@@ -2767,7 +2767,7 @@ void timerSet(int duration, int index) {
  80016ba:	bc80      	pop	{r7}
  80016bc:	4770      	bx	lr
  80016be:	bf00      	nop
- 80016c0:	20000160 	.word	0x20000160
+ 80016c0:	2000015c 	.word	0x2000015c
  80016c4:	20000158 	.word	0x20000158
 
 080016c8 <timerRun>:
@@ -2814,7 +2814,7 @@ void timerRun() {
  8001710:	3301      	adds	r3, #1
  8001712:	607b      	str	r3, [r7, #4]
  8001714:	687b      	ldr	r3, [r7, #4]
- 8001716:	2b04      	cmp	r3, #4
+ 8001716:	2b03      	cmp	r3, #3
  8001718:	dddc      	ble.n	80016d4 <timerRun+0xc>
 			}
 		}
@@ -2827,7 +2827,7 @@ void timerRun() {
  8001722:	bc80      	pop	{r7}
  8001724:	4770      	bx	lr
  8001726:	bf00      	nop
- 8001728:	20000160 	.word	0x20000160
+ 8001728:	2000015c 	.word	0x2000015c
  800172c:	20000158 	.word	0x20000158
 
 08001730 <HAL_MspInit>:
@@ -3219,7 +3219,7 @@ LoopFillZerobss:
   ldr r2, =_sbss
  800186c:	200000b8 	.word	0x200000b8
   ldr r4, =_ebss
- 8001870:	200002a8 	.word	0x200002a8
+ 8001870:	200002a0 	.word	0x200002a0
 
 08001874 <ADC1_2_IRQHandler>:
  * @retval : None
@@ -3367,7 +3367,7 @@ __weak void HAL_IncTick(void)
  800191c:	bc80      	pop	{r7}
  800191e:	4770      	bx	lr
  8001920:	20000054 	.word	0x20000054
- 8001924:	2000016c 	.word	0x2000016c
+ 8001924:	20000164 	.word	0x20000164
 
 08001928 <HAL_GetTick>:
   * @note  This function is declared as __weak to be overwritten in case of other
@@ -3386,7 +3386,7 @@ __weak uint32_t HAL_GetTick(void)
  8001932:	46bd      	mov	sp, r7
  8001934:	bc80      	pop	{r7}
  8001936:	4770      	bx	lr
- 8001938:	2000016c 	.word	0x2000016c
+ 8001938:	20000164 	.word	0x20000164
 
 0800193c <__NVIC_SetPriorityGrouping>:
            In case of a conflict between priority grouping and available

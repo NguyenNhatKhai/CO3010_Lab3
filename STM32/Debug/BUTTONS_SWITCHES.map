@@ -3403,7 +3403,7 @@ LOAD C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .igot.plt      0x00000000200000b8        0x0 C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7-m/nofp/crtbegin.o
                 0x00000000200000b8                . = ALIGN (0x4)
 
-.bss            0x00000000200000b8      0x1f0 load address 0x0000000008003de8
+.bss            0x00000000200000b8      0x1e8 load address 0x0000000008003de8
                 0x00000000200000b8                _sbss = .
                 0x00000000200000b8                __bss_start__ = _sbss
  *(.bss)
@@ -3446,31 +3446,29 @@ LOAD C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x0000000020000156                fsmState
  *fill*         0x0000000020000157        0x1 
  .bss.timerFlags
-                0x0000000020000158        0x5 ./Core/Src/software_timer.o
+                0x0000000020000158        0x4 ./Core/Src/software_timer.o
                 0x0000000020000158                timerFlags
- *fill*         0x000000002000015d        0x3 
  .bss.timerCounters
-                0x0000000020000160        0xa ./Core/Src/software_timer.o
- *fill*         0x000000002000016a        0x2 
- .bss.uwTick    0x000000002000016c        0x4 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
-                0x000000002000016c                uwTick
- .bss.__sf      0x0000000020000170      0x138 C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
-                0x0000000020000170                __sf
+                0x000000002000015c        0x8 ./Core/Src/software_timer.o
+ .bss.uwTick    0x0000000020000164        0x4 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+                0x0000000020000164                uwTick
+ .bss.__sf      0x0000000020000168      0x138 C:/ST/STM32CubeIDE_1.11.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x0000000020000168                __sf
  *(COMMON)
-                0x00000000200002a8                . = ALIGN (0x4)
-                0x00000000200002a8                _ebss = .
-                0x00000000200002a8                __bss_end__ = _ebss
+                0x00000000200002a0                . = ALIGN (0x4)
+                0x00000000200002a0                _ebss = .
+                0x00000000200002a0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200002a8      0x600 load address 0x0000000008003de8
-                0x00000000200002a8                . = ALIGN (0x8)
+                0x00000000200002a0      0x600 load address 0x0000000008003de8
+                0x00000000200002a0                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x00000000200002a8                PROVIDE (_end = .)
-                0x00000000200004a8                . = (. + _Min_Heap_Size)
- *fill*         0x00000000200002a8      0x200 
-                0x00000000200008a8                . = (. + _Min_Stack_Size)
- *fill*         0x00000000200004a8      0x400 
-                0x00000000200008a8                . = ALIGN (0x8)
+                0x00000000200002a0                PROVIDE (_end = .)
+                0x00000000200004a0                . = (. + _Min_Heap_Size)
+ *fill*         0x00000000200002a0      0x200 
+                0x00000000200008a0                . = (. + _Min_Stack_Size)
+ *fill*         0x00000000200004a0      0x400 
+                0x00000000200008a0                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
