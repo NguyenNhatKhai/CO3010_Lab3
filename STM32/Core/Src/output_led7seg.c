@@ -21,10 +21,12 @@ static void led7segDisplay(int index, int offset) {
 	if (offset < 0 || offset >= LED7SEG_DIGIT_NUMBER) return;
 	int num = led7segNumbers[index] / (int)pow(10, LED7SEG_DIGIT_NUMBER - offset - 1) % 10;
 	if (num >= 0 && num <= 9) {
-		GPIOA->ODR = (GPIOA->ODR | (led7segNum1s[num] << 8)) & ~(led7segNum0s[num] << 8);
+		GPIOA->BSRR = led7segNum1s[num] << 8;
+		GPIOA->BSRR = led7segNum0s[num] << (8 + 16);
 	}
 	else {
-		GPIOA->ODR = (GPIOA->ODR | (led7segNum1s[10] << 8)) & ~(led7segNum0s[10] << 8);
+		GPIOA->BSRR = led7segNum1s[10] << 8;
+		GPIOA->BSRR = led7segNum0s[10] << (8 + 16);
 	}
 	switch (index * LED7SEG_BLOCK_NUMBER + offset) {
 	case 0:
