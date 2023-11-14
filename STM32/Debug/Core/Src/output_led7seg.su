@@ -1,4 +1,4 @@
 ../Core/Src/output_led7seg.c:19:13:led7segDisplay	32	static
-../Core/Src/output_led7seg.c:59:6:led7segInit	8	static
-../Core/Src/output_led7seg.c:67:6:led7segUpdate	16	static
-../Core/Src/output_led7seg.c:72:6:led7segScanning	8	static
+../Core/Src/output_led7seg.c:61:6:led7segInit	8	static
+../Core/Src/output_led7seg.c:69:6:led7segUpdate	16	static
+../Core/Src/output_led7seg.c:74:6:led7segScanning	8	static
