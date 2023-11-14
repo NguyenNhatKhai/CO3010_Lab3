@@ -361,7 +361,7 @@
      <ITEM name="TopLineAddress">E000E000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="600" x="708" flags="0000000b" y="620" h="400" pid="100" iid="1">
+   <POPUP w="600" x="708" flags="0000000a" y="620" h="400" pid="100" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="300" x="728" flags="0000000b" y="720" h="300" pid="101" iid="1">
